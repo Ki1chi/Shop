@@ -6,7 +6,7 @@ function App() {
   <>
     <div>Home</div>
     <p>this is the homepage</p>
-    <Link to="/Shop">Profile page</Link>
+    <div className="link"><Link to="/Shop">Shop page</Link></div>
   </>
   )
 }

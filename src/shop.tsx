@@ -6,7 +6,7 @@ function Shop() {
     <>
         <div>Shop</div>
         <p>this is the shop page</p>
-        <Link to="/">Profile page</Link>
+        <Link to="/">Home page</Link>
     </>
     )
 }
