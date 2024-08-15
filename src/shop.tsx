@@ -1,28 +1,33 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 
 function Shop() {
-
-    async function fetchData() {
-        try {
-          const response = await fetch('https://fakestoreapi.com/products');
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
+    const [productTitle, setProductTitle] = useState(null)
+    useEffect (()=> {
+        async function fetchData() {
+            try {
+              const response = await fetch('https://fakestoreapi.com/products');
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              const data = await response.json();
+              console.log(data);
+              const productName = await data.map((product) => product.title)
+              setProductTitle(productName[1])
+              console.log(productName[1])
+            } catch (error) {
+              console.error('There has been a problem with your fetch operation:', error);
+            }
           }
-          const data = await response.json();
-          console.log(data);
-          const productName = await data.map((product) => product.title)
-          console.log(productName)
-        } catch (error) {
-          console.error('There has been a problem with your fetch operation:', error);
-        }
-      }
-      fetchData();
+          fetchData();
+    }, [])
 
     return (
     <>
         <div>Shop</div>
         <p>this is the shop page</p>
-        <div></div>
+        <div>product name = {productTitle}</div>
         <Link to="/">Home page</Link>
     </>
     )
