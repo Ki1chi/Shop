@@ -16,7 +16,7 @@ function Shop() {
               }
               const data = await response.json();
               // This function is to map out the product information from the API call
-              setProduct(data.map((product) => {
+              setProduct(data.map((product: any) => {
                 return <li>
                   <img src={product.image} alt={product.title} className='productimg'/>
                     <p>
@@ -35,16 +35,14 @@ function Shop() {
     }, [])
     
     
-
     return (
     <>
         <div>Shop</div>
         <p>this is the shop page</p>
+        <Link to="/">Home page</Link>
         <div>
           <ul className="list">{product}</ul>
         </div>
-        <Link to="/">Home page</Link>
-
     </>
     )
 }
