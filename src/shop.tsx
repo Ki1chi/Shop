@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 
 
 function Shop() {
-    const [productTitle, setProductTitle] = useState(null)
-    const [productImg, setProductImg] = useState(null)
+    const [data, setData] = useState(null);
+    const [product, setProduct] = useState(null);
     useEffect (()=> {
         async function fetchData() {
             try {
@@ -13,27 +13,34 @@ function Shop() {
                 throw new Error('Network response was not ok');
               }
               const data = await response.json();
-              console.log(data);
-              const productName = await data.map((product) => product.title)
-              const productImage = await data.map((product) => product.image)
-              setProductImg(productImage[1])
-              setProductTitle(productName[1])
+              setData(data);
+              console.log(data)
+              setProduct(data.map((product) => {
+                return <li>
+                  <img src={product.image} alt={product.title} />
+                    <p>
+                      Product: {product.title}
+                      Price: {product.price}
+                    </p>
+                </li>
+                }))
             } catch (error) {
               console.error('There has been a problem with your fetch operation:', error);
             }
           }
           fetchData();
     }, [])
+    
+    
 
     return (
     <>
         <div>Shop</div>
         <p>this is the shop page</p>
-        <Link to="/">Home page</Link>
-        <div className="productContainer">
-        <div>product name = {productTitle}</div>
-        <img src={productImg} alt="" />
+        <div>
+          <ul> {product}</ul>
         </div>
+        <Link to="/">Home page</Link>
 
     </>
     )
