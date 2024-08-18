@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 
 
 function Shop() {
-    const [data, setData] = useState(null);
+    // This is the setstate for products information
     const [product, setProduct] = useState(null);
+
+    // Function to fetch from API
     useEffect (()=> {
         async function fetchData() {
             try {
@@ -13,8 +15,7 @@ function Shop() {
                 throw new Error('Network response was not ok');
               }
               const data = await response.json();
-              setData(data);
-              console.log(data)
+              // This function is to map out the product information from the API call
               setProduct(data.map((product) => {
                 return <li>
                   <img src={product.image} alt={product.title} className='productimg'/>
