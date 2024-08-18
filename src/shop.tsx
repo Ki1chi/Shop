@@ -17,9 +17,11 @@ function Shop() {
               console.log(data)
               setProduct(data.map((product) => {
                 return <li>
-                  <img src={product.image} alt={product.title} />
+                  <img src={product.image} alt={product.title} className='productimg'/>
                     <p>
                       Product: {product.title}
+                    </p>
+                    <p>
                       Price: {product.price}
                     </p>
                 </li>
@@ -38,7 +40,7 @@ function Shop() {
         <div>Shop</div>
         <p>this is the shop page</p>
         <div>
-          <ul> {product}</ul>
+          <ul className="list">{product}</ul>
         </div>
         <Link to="/">Home page</Link>
 
