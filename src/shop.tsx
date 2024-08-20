@@ -16,15 +16,21 @@ function Shop() {
               }
               const data = await response.json();
               // This function is to map out the product information from the API call
+              console.log(data)
               setProduct(data.map((product: any) => {
-                return <li>
+                return <li key={product.id}>
+                  <main className="item">
                   <img src={product.image} alt={product.title} className='productimg'/>
+                    <p>
+                      Id {product.id}
+                    </p>
                     <p>
                       Product: {product.title}
                     </p>
                     <p>
                       Price: {product.price}
                     </p>
+                    </main>
                 </li>
                 }))
             } catch (error) {

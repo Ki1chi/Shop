@@ -10,8 +10,10 @@
 
 .list li {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 
-.listcontainer {
-  display: flex;
-}
+
+
