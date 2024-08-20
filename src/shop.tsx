@@ -40,7 +40,7 @@ function Shop() {
         <div>Shop</div>
         <p>this is the shop page</p>
         <Link to="/">Home page</Link>
-        <div>
+        <div className="listcontainer">
           <ul className="list">{product}</ul>
         </div>
     </>
