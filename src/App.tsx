@@ -6,9 +6,16 @@ function App() {
   
   return (
   <>
-    <div>Home</div>
-    <p>this is the homepage</p>
-    <div className="link"><Link to="/Shop">Shop page</Link></div>
+    <header className="header">Home</header>
+    <main>
+      <div className="main-text">
+        Welcome to shop
+      </div>
+      <div className="main-text">
+        Check out our cool items
+      </div>
+    </main>
+    <div className="link-home"><Link to="/Shop">Shop page</Link></div>
   </>
   )
 }
