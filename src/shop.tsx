@@ -27,7 +27,7 @@ function Shop() {
                     <p>
                       {product.title}
                     </p>
-                    <p style={{color:"red"}}>
+                    <p className="price">
                       Price: {product.price}
                     </p>
                     <p>
