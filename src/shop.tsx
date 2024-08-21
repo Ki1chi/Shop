@@ -21,14 +21,17 @@ function Shop() {
                 return <li key={product.id}>
                   <main className="item">
                   <img src={product.image} alt={product.title} className='productimg'/>
-                    <p>
+                    {/* <p>
                       Id {product.id}
-                    </p>
+                    </p> */}
                     <p>
-                      Product: {product.title}
+                      {product.title}
                     </p>
-                    <p>
+                    <p style={{color:"red"}}>
                       Price: {product.price}
+                    </p>
+                    <p>
+                      <button>Add to Cart</button>
                     </p>
                     </main>
                 </li>
@@ -43,12 +46,14 @@ function Shop() {
     
     return (
     <>
-        <div>Shop</div>
-        <p>this is the shop page</p>
-        <Link to="/">Home page</Link>
+        <header className="header-shop">Shop</header>
+        <div className="shop-text">this is the shop page</div>
+        <main>  
         <div className="listcontainer">
           <ul className="list">{product}</ul>
         </div>
+        </main>
+        <Link to="/" className="shop-link">Home page</Link>
     </>
     )
 }

@@ -9,7 +9,7 @@ function App() {
     <header className="header">Home</header>
     <main>
       <div className="main-text">
-        Welcome to shop
+        Welcome to shop homepage
       </div>
       <div className="main-text">
         Check out our cool items

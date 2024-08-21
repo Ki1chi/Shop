@@ -13,13 +13,16 @@
 .productimg {
   width: 150px;
   height: 150px;
+  margin-left: auto;
 }
 
 .list li {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 30vw;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .header {
@@ -31,5 +34,29 @@
 
 .main-text {
   font-size: 3rem;
+  text-align: center;
+}
+
+.list {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 50px;
+  column-gap: 50px;
+}
+
+.header-shop {
+  font-size: 2.4rem;
+  text-align: center;
+}
+.shop-text {
+  font-size: 1.5rem;
+  text-align: center;
+  height: 10vh;
+}
+.shop-link {
+  font-size: 2.5rem;
   text-align: center;
 }
