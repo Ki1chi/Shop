@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-// import { handleClick } from "./utils"
+import { handleCart} from "./utils"
 
 
-
+const cartArr = [];
 
 function Shop() {
     // This is the setstate for products information
     const [product, setProduct] = useState(null);
+    // This is the setstate for cart items
     const [cart, setCart] = useState(0);
     
-
-
     // Function to fetch from API
     useEffect (()=> {
         async function fetchData() {
@@ -22,14 +21,11 @@ function Shop() {
               }
               const data = await response.json();
               // This function is to map out the product information from the API call
-              console.log(data)
+              // console.log(data)
               setProduct(data.map((product: any) => {
                 return <li key={product.id}>
-                  <main className="item">
+                  <div className="item">
                   <img src={product.image} alt={product.title} className='productimg'/>
-                    {/* <p>
-                      Id {product.id}
-                    </p> */}
                     <p>
                       {product.title}
                     </p>
@@ -37,9 +33,14 @@ function Shop() {
                       Price: {product.price}
                     </p>
                     <p>
-                      <button className="addbtn" onClick={handleClick}>Add to Cart</button>
+                      <button className="addbtn" onClick={function handleClick() {
+                        setCart(cart + 1)
+                        cartArr.push(product)
+                        console.log(cartArr)
+                        // handleCart(product);
+                      }}>Add to Cart</button>
                     </p>
-                    </main>
+                    </div>
                 </li> 
                 }))
             } catch (error) {
@@ -47,10 +48,7 @@ function Shop() {
             }
           }
           fetchData();
-          function handleClick() {
-            setCart(cart + 1);
-            console.log("count")
-          }
+
           
     }, [cart])
     
@@ -60,7 +58,7 @@ function Shop() {
         <header className="header-shop">
           <div className="headerforcart">
             <h2 className="shop-main">ショップ</h2>
-            <h2>カート アイテム：{cart}</h2>
+            <h2 className="cartbtn">カート アイテム：{cart}</h2>
           </div>
           <Link to="/" className="shop-link">ホーム</Link></header>
         <div className="shop-text">ようこそ店え</div>
