@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+// import { handleClick } from "./utils"
+
+
 
 
 function Shop() {
     // This is the setstate for products information
     const [product, setProduct] = useState(null);
+    const [cart, setCart] = useState(0);
+    
+
 
     // Function to fetch from API
     useEffect (()=> {
@@ -31,29 +37,41 @@ function Shop() {
                       Price: {product.price}
                     </p>
                     <p>
-                      <button>Add to Cart</button>
+                      <button className="addbtn" onClick={handleClick}>Add to Cart</button>
                     </p>
                     </main>
-                </li>
+                </li> 
                 }))
             } catch (error) {
               console.error('There has been a problem with your fetch operation:', error);
             }
           }
           fetchData();
-    }, [])
+          function handleClick() {
+            setCart(cart + 1);
+            console.log("count")
+          }
+          
+    }, [cart])
     
     
     return (
     <>
-        <header className="header-shop">Shop</header>
-        <div className="shop-text">this is the shop page</div>
+        <header className="header-shop">
+          <div className="headerforcart">
+            <h2 className="shop-main">ショップ</h2>
+            <h2>カート アイテム：{cart}</h2>
+          </div>
+          <Link to="/" className="shop-link">ホーム</Link></header>
+        <div className="shop-text">ようこそ店え</div>
         <main>  
         <div className="listcontainer">
           <ul className="list">{product}</ul>
         </div>
         </main>
-        <Link to="/" className="shop-link">Home page</Link>
+        <footer className="shop-link">
+        <Link to="/" >ホーム</Link>
+        </footer>
     </>
     )
 }

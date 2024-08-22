@@ -33,6 +33,7 @@
 }
 
 .main-text {
+  color: #aa0000;
   font-size: 3rem;
   text-align: center;
 }
@@ -67,4 +68,30 @@
 
 .price:after{
   content: '$'
+}
+
+.headerforcart {
+  display: flex;
+  background: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-main {
+  color: #aa0000;
+  width: 50vw;
+}
+
+.addbtn {
+  background: white;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addbtn:hover {
+  background: #aa0000;
+  color: white;
 }

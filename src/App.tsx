@@ -9,13 +9,13 @@ function App() {
     <header className="header">Home</header>
     <main>
       <div className="main-text">
-        Welcome to shop homepage
+        ホームページ
       </div>
       <div className="main-text">
-        Check out our cool items
+        カッコいいボタン
       </div>
     </main>
-    <div className="link-home"><Link to="/Shop">Shop page</Link></div>
+    <div className="link-home"><Link to="/Shop">ショップ</Link></div>
   </>
   )
 }
