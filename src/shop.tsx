@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { handleCart} from "./utils"
 
 
-const cartArr = [];
+
+
+const cartArr: any[] = [];
 
 function Shop() {
     // This is the setstate for products information
@@ -34,10 +35,12 @@ function Shop() {
                     </p>
                     <p>
                       <button className="addbtn" onClick={function handleClick() {
+                        // This onclick will add the clicked product into an array and 
+                        // also update the cart number
                         setCart(cart + 1)
                         cartArr.push(product)
                         console.log(cartArr)
-                        // handleCart(product);
+                        
                       }}>Add to Cart</button>
                     </p>
                     </div>
@@ -57,11 +60,13 @@ function Shop() {
     <>
         <header className="header-shop">
           <div className="headerforcart">
+          <Link to="/" className="shop-link">ホーム</Link>
             <h2 className="shop-main">ショップ</h2>
             <h2 className="cartbtn">カート アイテム：{cart}</h2>
           </div>
-          <Link to="/" className="shop-link">ホーム</Link></header>
-        <div className="shop-text">ようこそ店え</div>
+          </header>
+        <div className="shop-text">
+        </div>
         <main>  
         <div className="listcontainer">
           <ul className="list">{product}</ul>

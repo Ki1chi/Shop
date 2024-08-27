@@ -7,6 +7,7 @@ import App from './App.tsx'
 import Shop from './shop.tsx'
 import './App.css'
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +18,8 @@ const router = createBrowserRouter([
     element: <Shop />,
   },
 ]);
+
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

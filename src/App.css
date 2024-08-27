@@ -49,11 +49,13 @@
 }
 
 .header-shop {
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-align: center;
+  position: fixed;
+  width: 100vw;
 }
 .shop-text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-align: center;
   height: 10vh;
 }
@@ -61,6 +63,7 @@
   font-size: 2.5rem;
   text-align: center;
 }
+
 
 .price {
   color: #aa0000;
@@ -94,4 +97,13 @@
 .addbtn:hover {
   background: #aa0000;
   color: white;
+}
+
+.cartbtn:hover {
+  color: #aa0000;
+  cursor: pointer;
+}
+
+.listcontainer {
+  margin-top: 50px;
 }
