@@ -1,16 +1,15 @@
 
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { Home } from "./home";
+import { Shop } from "./shop";
+import { useEffect, useState } from "react";
 
 
 function App() {
-
-  
   
   return (
   <>
-    <Home />
-    <div className="link-home"><Link to="/Shop">ショップ</Link></div>
+  <Outlet />
   </>
   )
 }

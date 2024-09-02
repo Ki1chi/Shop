@@ -1,8 +1,11 @@
 
+import { Link } from "react-router-dom";
+
 export function Home() {
     return (
         <>
         <header className="header">Home</header>
+        <div className="link-home"><Link to="/Shop">ショップ</Link></div>
         <main>
             <div className="main-text">
             ホームページ
@@ -15,3 +18,5 @@ export function Home() {
     )
 
 } 
+
+export default Home

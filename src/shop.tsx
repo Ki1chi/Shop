@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+
 import { useEffect, useState } from "react";
 
 
@@ -58,9 +59,10 @@ function Shop() {
     
     return (
     <>
+    <Outlet />
         <header className="header-shop">
           <div className="headerforcart">
-          <Link to="/" className="shop-link">ホーム</Link>
+          <Link to="/home" className="shop-link">ホーム</Link>
             <h2 className="shop-main">ショップ</h2>
             <h2 className="cartbtn">カート アイテム：{cart}</h2>
           </div>
@@ -73,7 +75,7 @@ function Shop() {
         </div>
         </main>
         <footer className="shop-link">
-        <Link to="/" >ホーム</Link>
+        <Link to="/home" >ホーム</Link>
         </footer>
     </>
     )
