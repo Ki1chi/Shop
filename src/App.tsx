@@ -1,21 +1,15 @@
 
 import { Link } from "react-router-dom";
-
+import { Home } from "./home";
 
 
 function App() {
+
+  
   
   return (
   <>
-    <header className="header">Home</header>
-    <main>
-      <div className="main-text">
-        ホームページ
-      </div>
-      <div className="main-text">
-        カッコいいボタン
-      </div>
-    </main>
+    <Home />
     <div className="link-home"><Link to="/Shop">ショップ</Link></div>
   </>
   )
