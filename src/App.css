@@ -156,3 +156,28 @@
   justify-content: center;
   align-items: ceter;
 }
+
+.cart-img {
+  height: 120px;
+  width: 120px;
+}
+
+
+.cart-items {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.cart-item {
+  display: flex;
+}
+
+.cart-detail {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 20px;
+}

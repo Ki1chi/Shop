@@ -11,7 +11,6 @@ import './App.css'
 
 
 const router = createBrowserRouter([
-
   {
     path: "/",
     element: <App />,
@@ -21,9 +20,8 @@ const router = createBrowserRouter([
       { path: "/cart", element: <Cart />}
     ],
   },
-
 ]);
-// ]);
+
 
 
 

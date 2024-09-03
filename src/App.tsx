@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 // const cartArr: any = [];
 
+
 function App() {
   // This is the setstate for products information
     const [product, setProduct] = useState(null);
@@ -44,7 +45,6 @@ function App() {
                         setCartItems(cartItems)
                         setCart(cartItems.length)
                         console.log(cartItems)
-                        
                       }}>Add to Cart</button>
                     </p>
                     </div>

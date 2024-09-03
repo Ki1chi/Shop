@@ -14,13 +14,15 @@ function Cart() {
     // This function will display all the items in the cart
     useEffect(()=> {
         setCartItem(cartItems.map((product: any) => {
-        return <li key = {product.id}>
-            <p>{product.id}</p>
+        return <li key = {product.id} className="cart-item">
+            <img  className="cart-img" src={product.image} alt=""/>
+            <div className="cart-detail">
+            {/* <p>{product.id}</p> */}
             <div>{product.title}</div>
             <p>{(product.price)}</p>
+            </div>
         </li>
     }))
-
 },[])
 
 
@@ -33,8 +35,9 @@ function Cart() {
         </header>
         <main>
         <h1 className="cart-main-text"> Cart Items: {cart}</h1>
-        <div>{cartItem}</div>
-        <div>------</div>
+        <div className="cart-items">
+        <ul>{cartItem}</ul>
+        </div>
         <div>Total: {addPrice(cartPrice)}</div>
         </main>
         </>
