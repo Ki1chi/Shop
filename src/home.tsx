@@ -9,11 +9,12 @@ function Home() {
     return (
         <>
         <header className="header">
-            <h1>Home</h1>
-            <Link to="/cart" className="cartbtn">Cart：{cart}</Link>
+        <Link to="/Shop" className="header-link">Shop</Link>
+        <div className="header-miku">Miku Store</div>
+        <Link to="/cart" className="cartbtn">Cart：{cart}</Link>
         </header>
         <main>
-        <div className="link-home"><Link to="/Shop">Shop</Link></div>
+        
             <div className="main-text">
             Buy some cool stuff by visiting the shop page.
             </div>

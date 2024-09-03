@@ -4,13 +4,15 @@ import {  Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
-const cartArr: any = [];
+// const cartArr: any = [];
 
 function App() {
   // This is the setstate for products information
     const [product, setProduct] = useState(null);
     // This is the setstate for cart items
     const [cart, setCart] = useState(0);
+
+    const [cartItems, setCartItems] = useState([])
     
     // Function to fetch from API
     useEffect (()=> {
@@ -37,9 +39,10 @@ function App() {
                       <button className="addbtn" onClick={function handleClick() {
                         // This onclick will add the clicked product into an array and 
                         // also update the cart number
-                        cartArr.push(product)
-                        setCart(cartArr.length)
-                        console.log(cartArr)
+                        cartItems.push(product)
+                        setCartItems(cartItems)
+                        setCart(cartItems.length)
+                        console.log(cartItems)
                         
                       }}>Add to Cart</button>
                     </p>
@@ -58,7 +61,7 @@ function App() {
   
   return (
   <>
-  <Outlet context ={{product, cart}}/>
+  <Outlet context ={{product, cart, cartItems}}/>
   </>
   )
 }

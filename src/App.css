@@ -25,13 +25,17 @@
   font-size: 1.4rem;
 }
 
+.header-miku {
+  color: #aa0000;
+  font-size: 3rem;
+}
 .header {
-  font-size: 2rem;
   background: black;
   text-align: center;
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10vw;
 }
 
@@ -118,10 +122,37 @@
 }
 
 
-.img {
+.header-link {
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
 }
+
+.header-link:hover {
+  color: #aa0000;
+}
+
 .imgcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cart-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  color: white;
+  font-size: 3rem;
+  background: black;
+}
+
+.cart-header-text {
+  color: #aa0000;
+}
+
+.cart-main-text {
+  display: flex;
+  justify-content: center;
+  align-items: ceter;
 }
