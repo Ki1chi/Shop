@@ -12,10 +12,15 @@ export function Home() {
             <h1>Home</h1>
             <h2 className="cartbtn">Cart：{cart}</h2>
         </header>
-        <div className="link-home"><Link to="/Shop">Shop</Link></div>
+
         <main>
+        <div className="link-home"><Link to="/Shop">Shop</Link></div>
             <div className="main-text">
             Buy some cool stuff by visiting the shop page.
+            </div>
+            {/* <div className="homeimg"></div> */}
+            <div className="imgcontainer">
+            <img src="src/assets/Hachune_Miku_infobox_size.webp" alt="hatsune miku" className="img"/>
             </div>
             <div className="main-text">
             </div>
