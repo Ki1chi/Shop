@@ -9,11 +9,11 @@ import { useEffect, useState } from "react";
 function App() {
   // This is the setstate for products information
     const [product, setProduct] = useState(null);
-    // This is the setstate for cart items
+    // This is the setstate for cart Number of items
     const [cart, setCart] = useState(0);
-
-    const [cartItems, setCartItems] = useState([])
-    
+    // This is the setstate for cart items
+    const [cartItems, setCartItems] = useState([]);
+    const [cartPrice, setCartPrice] = useState([]);
     // Function to fetch from API
     useEffect (()=> {
         async function fetchData() {
@@ -39,9 +39,12 @@ function App() {
                       <button className="addbtn" onClick={function handleClick() {
                         // This onclick will add the clicked product into an array and also update the cart number
                         cartItems.push(product)
+                        cartPrice.push(product.price);
+                        console.log(cartPrice)
                         setCartItems(cartItems)
                         setCart(cartItems.length)
                         console.log(cartItems)
+                        
                       }}>Add to Cart</button>
                     </p>
                     </div>
@@ -59,7 +62,7 @@ function App() {
   
   return (
   <>
-  <Outlet context ={{product, cart, cartItems}}/>
+  <Outlet context ={{product, cart, cartItems, cartPrice}}/>
   </>
   )
 }

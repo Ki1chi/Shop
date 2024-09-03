@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useOutletContext } from 'react-router-dom';
+import  { addPrice } from './utils'
 
 
 function Cart() {
@@ -8,6 +9,7 @@ function Cart() {
     // Used outletcontext to bring state from App component
     const { cart } = useOutletContext();
     const { cartItems } = useOutletContext();
+    const { cartPrice } = useOutletContext();
 
     // This function will display all the items in the cart
     useEffect(()=> {
@@ -15,7 +17,7 @@ function Cart() {
         return <li key = {product.id}>
             <p>{product.id}</p>
             <div>{product.title}</div>
-            <p>{product.price}</p>
+            <p>{(product.price)}</p>
         </li>
     }))
 
@@ -30,8 +32,10 @@ function Cart() {
         <Link to="/Shop" className="header-link">Shop</Link>
         </header>
         <main>
-        <h1 className="cart-main-text"> Cart Items:{cart}</h1>
+        <h1 className="cart-main-text"> Cart Items: {cart}</h1>
         <div>{cartItem}</div>
+        <div>------</div>
+        <div>Total: {addPrice(cartPrice)}</div>
         </main>
         </>
     )
