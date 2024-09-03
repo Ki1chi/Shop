@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useOutletContext } from 'react-router-dom';
 
 function Home() {
+    // Used outletcontext to bring state from App component
     const { cart } = useOutletContext();
 
     return (

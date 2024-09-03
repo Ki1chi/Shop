@@ -37,13 +37,11 @@ function App() {
                     </p>
                     <p>
                       <button className="addbtn" onClick={function handleClick() {
-                        // This onclick will add the clicked product into an array and 
-                        // also update the cart number
+                        // This onclick will add the clicked product into an array and also update the cart number
                         cartItems.push(product)
                         setCartItems(cartItems)
                         setCart(cartItems.length)
                         console.log(cartItems)
-                        
                       }}>Add to Cart</button>
                     </p>
                     </div>
@@ -56,7 +54,7 @@ function App() {
           fetchData();
 
           
-    }, [cart])
+    }, [cart, cartItems])
   
   
   return (
