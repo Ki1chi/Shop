@@ -3,16 +3,15 @@ import { Link } from "react-router-dom";
 
 import { useOutletContext } from 'react-router-dom';
 
-export function Home() {
+function Home() {
     const { cart } = useOutletContext();
 
     return (
         <>
         <header className="header">
             <h1>Home</h1>
-            <h2 className="cartbtn">Cart：{cart}</h2>
+            <Link to="/cart" className="cartbtn">Cart：{cart}</Link>
         </header>
-
         <main>
         <div className="link-home"><Link to="/Shop">Shop</Link></div>
             <div className="main-text">

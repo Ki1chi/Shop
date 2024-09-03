@@ -5,7 +5,7 @@
 }
 
 .link-home {
-  font-size: 2rem;
+  font-size: 2.8rem;
   text-align: center;
   text-decoration: none;
 }
@@ -26,7 +26,7 @@
 }
 
 .header {
-  font-size: 2.4rem;
+  font-size: 2rem;
   background: black;
   text-align: center;
   color: white;
@@ -100,6 +100,12 @@
 .addbtn:hover {
   background: #aa0000;
   color: white;
+}
+
+.cartbtn {
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
 }
 
 .cartbtn:hover {

@@ -13,7 +13,7 @@ function Shop() {
           <div className="headerforcart">
           <Link to="/home" className="shop-link">Home</Link>
             <h2 className="shop-main"> Super Cool Shop</h2>
-            <h2 className="cartbtn">Cart：{cart}</h2>
+            <Link to="/cart" className="cartbtn">Cart：{cart}</Link>
           </div>
           </header>
         <div className="shop-text">

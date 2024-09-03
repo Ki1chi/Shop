@@ -10,7 +10,7 @@ function App() {
   // This is the setstate for products information
     const [product, setProduct] = useState(null);
     // This is the setstate for cart items
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(0);
     
     // Function to fetch from API
     useEffect (()=> {
