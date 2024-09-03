@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useOutletContext } from 'react-router-dom';
-import  { addPrice } from './utils'
+import  { addPrice, roundUpMoney } from './utils'
 
 
 function Cart() {
@@ -19,7 +19,7 @@ function Cart() {
             <div className="cart-detail">
             {/* <p>{product.id}</p> */}
             <div>{product.title}</div>
-            <p>{(product.price)}</p>
+            <p className="price">{(product.price)}</p>
             </div>
         </li>
     }))
@@ -34,12 +34,17 @@ function Cart() {
         <Link to="/Shop" className="header-link">Shop</Link>
         </header>
         <main>
-        <h1 className="cart-main-text"> Cart Items: {cart}</h1>
+        <h1 className="cart-main-text"> {cart}</h1>
         <div className="cart-items">
         <ul>{cartItem}</ul>
         </div>
-        <div>Total: {addPrice(cartPrice)}</div>
+        <div className="total">Total: {roundUpMoney(addPrice(cartPrice))}</div>
         </main>
+        <footer className="cart-footer">
+            <button className="buy" onClick={() => {
+                location.reload();
+            }}>Buy</button>
+        </footer>
         </>
     )
 };

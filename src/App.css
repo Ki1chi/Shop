@@ -143,8 +143,10 @@
   align-items: center;
   gap: 10vw;
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
   background: black;
+  position: fixed;
+  width: 100vw;
 }
 
 .cart-header-text {
@@ -155,6 +157,7 @@
   display: flex;
   justify-content: center;
   align-items: ceter;
+  font-size: 3rem;
 }
 
 .cart-img {
@@ -169,7 +172,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 }
 
 .cart-item {
@@ -179,5 +181,32 @@
 .cart-detail {
   font-size: 1.5rem;
   display: flex;
-  gap: 20px;
+  gap: 40px;
+}
+
+.total {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.buy {
+  margin-top: 3vw;
+  margin-bottom: 6vh;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.buy:hover {
+  background: #aa0000;
+  cursor: pointer;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price {
+  color: #aa0000;
 }

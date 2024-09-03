@@ -1,6 +1,6 @@
 
 
-export {checkForDupeId, addPrice};
+export {checkForDupeId, addPrice, roundUpMoney};
 
 function checkForDupeId (arr: Array<[]>) {
     
@@ -14,6 +14,9 @@ function addPrice (arr:Array<[]>) {
     return sum
 }
 
+function roundUpMoney(num) {
+    return Math.ceil(num * 100) / 100;
+}
 
 
 
