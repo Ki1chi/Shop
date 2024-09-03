@@ -1,11 +1,10 @@
 
-import { Link, Outlet } from "react-router-dom";
-import { Home } from "./home";
-import { Shop } from "./shop";
+import {  Outlet } from "react-router-dom";
+
 import { useEffect, useState } from "react";
 
 
-const cartArr: any[] = [];
+const cartArr: Array<object> = [];
 
 function App() {
   // This is the setstate for products information

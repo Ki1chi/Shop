@@ -107,3 +107,9 @@
 .listcontainer {
   margin-top: 50px;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
