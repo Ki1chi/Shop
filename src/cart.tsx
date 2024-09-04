@@ -23,7 +23,7 @@ function Cart() {
             </div>
         </li>
     }))
-},[])
+},[cartItems])
 
 
     return (

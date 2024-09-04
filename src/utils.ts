@@ -1,20 +1,18 @@
 
 
-export {checkForDupeId, addPrice, roundUpMoney};
+export { addPrice, roundUpMoney};
 
-function checkForDupeId (arr: Array<[]>) {
-    
-};
+
 
 function addPrice (arr:Array<[]>) {
-    let sum:int = 0;
+    let sum:any = 0;
     for (let i = 0; i < arr.length; i++){
         sum += arr[i];
     }
     return sum
 }
 
-function roundUpMoney(num) {
+function roundUpMoney(num:any) {
     return Math.ceil(num * 100) / 100;
 }
 

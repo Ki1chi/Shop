@@ -1,20 +1,23 @@
 
 import {  Outlet } from "react-router-dom";
 
-import { useEffect, useState } from "react";
+import { ContextType, useEffect, useState } from "react";
 
 
 // const cartArr: any = [];
 
 
+
+
 function App() {
+  
   // This is the setstate for products information
     const [product, setProduct] = useState(null);
     // This is the setstate for cart Number of items
     const [cart, setCart] = useState(0);
     // This is the setstate for cart items
     const [cartItems, setCartItems] = useState([]);
-    const [cartPrice, setCartPrice] = useState([]);
+    const [cartPrice] = useState([]);
     // Function to fetch from API
     useEffect (()=> {
         async function fetchData() {
@@ -57,7 +60,7 @@ function App() {
           fetchData();
 
           
-    }, [cart, cartItems])
+    }, [cart, cartItems, cartPrice])
   
   
   return (
