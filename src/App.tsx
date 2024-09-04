@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 // const cartArr: any = [];
 
 
-
-
 function App() {
   
   // This is the setstate for products information
