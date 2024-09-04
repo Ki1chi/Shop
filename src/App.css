@@ -210,3 +210,7 @@
 .price {
   color: #aa0000;
 }
+
+.miku {
+  content:url(src/assets/miku.webp)
+}

@@ -21,7 +21,7 @@ function Home() {
             </div>
             {/* <div className="homeimg"></div> */}
             <div className="imgcontainer">
-            <img src="../src/assets/Hachune_Miku_infobox_size.webp" alt="hatsune miku green onion" className="img"/>
+            <div className="miku"></div>
             </div>
             <div className="main-text">
             </div>
