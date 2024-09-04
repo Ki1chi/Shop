@@ -5,8 +5,8 @@ import { useOutletContext } from 'react-router-dom';
 
 function Shop() {
   // Used outletcontext to bring state from App component
-  const { product }  = useOutletContext();
-  const { cart } = useOutletContext();
+  const { product }: any  = useOutletContext();
+  const { cart }: any = useOutletContext();
     
     return (
     <>

@@ -7,9 +7,9 @@ import  { addPrice, roundUpMoney } from './utils'
 function Cart() {
     const [cartItem, setCartItem] = useState([]);
     // Used outletcontext to bring state from App component
-    const { cart } = useOutletContext();
-    const { cartItems } = useOutletContext();
-    const { cartPrice } = useOutletContext();
+    const { cart }: any= useOutletContext();
+    const { cartItems }: any = useOutletContext();
+    const { cartPrice }: any = useOutletContext();
 
     // This function will display all the items in the cart
     useEffect(()=> {
